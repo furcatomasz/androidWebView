@@ -1,6 +1,7 @@
 package com.example.slavsgame;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import org.xwalk.core.XWalkView;
