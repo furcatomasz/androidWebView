@@ -1,10 +1,11 @@
 package com.example.slavsgame;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import org.xwalk.core.XWalkView;
 
-public class WebView extends AppCompatActivity {
+public class WebView extends Activity {
     private XWalkView mXWalkView;
 
     @Override
@@ -12,8 +13,8 @@ public class WebView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
 
-        mXWalkView = (XWalkView) findViewById(R.id.main_web_view);
-        mXWalkView.load("http://crosswalk-project.org/", null);
+        mXWalkView = (XWalkView) findViewById(R.id.activity_main);
+        mXWalkView.load("http://slavsgame.com", null);
     }
 
 
