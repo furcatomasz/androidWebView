@@ -1,8 +1,9 @@
-package com.example.slavsgame;
+package com.slavsgame;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -22,6 +23,7 @@ public class WebViewActivity extends Activity {
         webSettings.setJavaScriptEnabled(true);
         mWebView.loadUrl("http://slavsgame.com");
         mWebView.setWebViewClient(new AppWebViewClient());
+        mWebView.setWebChromeClient(new WebChromeClient());
         mWebView.getSettings().setLoadWithOverviewMode(true);
         mWebView.getSettings().setUseWideViewPort(true);
         mWebView.getSettings().setDomStorageEnabled(true);

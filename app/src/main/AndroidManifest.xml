@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.slavsgame">
+    package="com.slavsgame">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".WebViewActivity"
+            android:name="com.slavsgame.WebViewActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
             android:launchMode="singleTop">
