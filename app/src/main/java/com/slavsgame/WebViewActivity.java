@@ -9,6 +9,8 @@ import android.webkit.WebView;
 
 public class WebViewActivity extends Activity {
 
+    public static final String USER_AGENT = "Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
+
     private WebView mWebView;
 
     @Override
@@ -27,10 +29,11 @@ public class WebViewActivity extends Activity {
         mWebView.getSettings().setLoadWithOverviewMode(true);
         mWebView.getSettings().setUseWideViewPort(true);
         mWebView.getSettings().setDomStorageEnabled(true);
+        mWebView.getSettings().setUserAgentString(USER_AGENT);
     }
 
     public void onBackPressed() {
-        if(mWebView.canGoBack()) {
+        if (mWebView.canGoBack()) {
             mWebView.goBack();
         } else {
             super.onBackPressed();
