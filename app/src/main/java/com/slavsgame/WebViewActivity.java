@@ -9,7 +9,7 @@ import android.webkit.WebView;
 
 public class WebViewActivity extends Activity {
 
-    public static final String USER_AGENT = "Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
+    public static final String USER_AGENT = "Mozilla/5.0 (Linux; Android 6.0.1; SM-J700M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36";
 
     private WebView mWebView;
 
@@ -20,16 +20,16 @@ public class WebViewActivity extends Activity {
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        mWebView = (WebView) findViewById(R.id.activity_main_webview);
-        WebSettings webSettings = mWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
+        mWebView = findViewById(R.id.activity_main_webview);
         mWebView.loadUrl("http://slavsgame.com");
         mWebView.setWebViewClient(new AppWebViewClient());
         mWebView.setWebChromeClient(new WebChromeClient());
         mWebView.getSettings().setLoadWithOverviewMode(true);
+        mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setUseWideViewPort(true);
         mWebView.getSettings().setDomStorageEnabled(true);
         mWebView.getSettings().setUserAgentString(USER_AGENT);
+        mWebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
     }
 
     public void onBackPressed() {
